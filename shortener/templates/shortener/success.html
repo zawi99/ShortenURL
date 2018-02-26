@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h1>Success!</h1>
+    <p>Long url: {{ object.url }}</p>
+    <p>Short url: <a class="btn btn-primary btn-link" href="{{ object.get_short_url }}"
+    >{{ object.get_short_url }}</a></p>
+    <a href="{% url 'index' %}" class="btn btn-default">+ New</a>
+</div>
+{% endblock %}
